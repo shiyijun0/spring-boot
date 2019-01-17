@@ -1,0 +1,6 @@
+dependencies {
+    compile files("$rootDir/util/libs/jsonrpc4j-1.5.1.jar")
+    compile libs.rsa
+   // compile('com.googlecode.jsonrpc4j:jsonrpc4j:1.5.1')
+    //compile('com.github.briandilley.jsonrpc4j:jsonrpc4j:1.5.1')
+}
