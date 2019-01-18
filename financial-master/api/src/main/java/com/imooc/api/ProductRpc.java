@@ -10,9 +10,13 @@ import org.h2.store.Page;
 
 import java.util.List;
 
-/**
- * 产品相关的rpc服务
- */
+/** 
+*@ClassName: ProductRpc 
+*@Description: 
+*@user: DELL
+*@Author: shiyijun
+*@Date: 2019/1/17 
+*/ 
 @JsonRpcService
 public interface ProductRpc {
     /**
@@ -30,6 +34,18 @@ public interface ProductRpc {
      * @return
      */
     Product findOne(String id);
+
+  
+   /**
+    * @Description:
+    * @MethodName:
+    * @Param: pro
+    * @return: pr
+    * @Author: shiyijun
+    * @Date: 2019/1/17
+    */
+    Product save(Product product);
+
 
 
 }

@@ -54,7 +54,7 @@ public class VerifyService {
         Date start = getStartOfDay(day);
         Date end = add24Hours(start);
         List<String> orders = verifyRepository.queryVerificationOrders(chanId,start,end);
-        String content = String.join(END_LINE,orders);
+        String content = String.join(END_LINE,orders);//使用换行符把订单对应起来
         FileUtil.writeAsString(path,content);
         return  path;
     }

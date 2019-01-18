@@ -44,4 +44,18 @@ public class ProductRpcImpl implements ProductRpc {
         LOG.info("查询产品详情,结果:{}", result);
         return result;
     }
+/**
+ * @Description: 保存产品
+ * @MethodName:
+ * @Param:
+ * @return: pro
+ * @Author: shiyijun
+ * @Date: 2019/1/17
+ */
+
+    @Override
+    public Product save(Product product) {
+
+        return  productService.addProduct(product);
+    }
 }

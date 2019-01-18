@@ -16,11 +16,11 @@ public class VerifyTask {
     @Autowired
     private VerifyService verifyService;
 
-//    @Scheduled(cron = "0/5 * * * * ? ")
+   @Scheduled(cron = "0/5 * * * * ? ")
     public void hello(){
         System.out.println("hello");
     }
-
+//http://cron.qqe2.com/  表达式网站
     @Scheduled(cron = "0 0 1,3,5 * * ? ")
     public void makeVerificationFile(){
         Date yesterday = new Date(System.currentTimeMillis() - 24 * 60 * 60 * 1000);

@@ -26,6 +26,8 @@ spring:
       url: jdbc:mysql://39.105.169.182:3306/seller-backup?user=root&password=root&useUnicode=true&characterEncoding=utf-8
   jpa:
     show-sql: true
+  profiles:
+    active: sign
 swagger:
   basePackage: com.imooc.seller.controller
   title: 销售端API

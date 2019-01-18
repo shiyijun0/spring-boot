@@ -70,7 +70,10 @@ public class ProductRpcService implements ApplicationListener<ContextRefreshedEv
         return product;
     }
 
-    //    @PostConstruct
+    public Product save(Product product){
+        return productRpc.save(product);
+    }
+       @PostConstruct
     public void init() {
         findAll();
     }

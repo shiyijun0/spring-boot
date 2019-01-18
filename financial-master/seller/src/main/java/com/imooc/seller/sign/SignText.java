@@ -13,4 +13,5 @@ public interface SignText {
     default String toText(){
         return JsonUtil.toJson(this);
     }
+
 }

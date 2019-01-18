@@ -4,7 +4,7 @@ package com.imooc.seller.enums;
  * 渠道配置信息
  */
 public enum ChanEnum {
-    ABC("111", "ABC", "/opt/ABC");
+    ABC("1", "ABC", "/opt/ABC");
     private String chanId;
     private String chanName;
 

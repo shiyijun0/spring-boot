@@ -73,7 +73,8 @@ public class ProductCache {
     public List<Product> findAll() {
         ProductRpcReq req = new ProductRpcReq();
         List<String> status = new ArrayList<>();
-        status.add(ProductStatus.IN_SELL.name());
+       // status.add(ProductStatus.IN_SELL.name());
+        status.add(ProductStatus.IN_SELL.getDesc());
         req.setStatusList(status);
 
         LOG.info("rpc查询全部产品,请求:{}", req);

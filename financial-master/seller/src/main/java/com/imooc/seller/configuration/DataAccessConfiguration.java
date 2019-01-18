@@ -27,10 +27,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -40,7 +37,7 @@ import java.util.Map;
 public class DataAccessConfiguration {
     @Autowired
     private JpaProperties properties;
-
+     Map map=new HashMap();
     @Autowired
     private ObjectProvider<List<SchemaManagementProvider>> providers;
     @Autowired
@@ -58,6 +55,7 @@ public class DataAccessConfiguration {
     @Primary
     @ConfigurationProperties("spring.datasource.primary")
     public DataSource primaryDataSource() {
+        map.put("df",2);
         return primaryDataSourceProperties().initializeDataSourceBuilder().build();
     }
 

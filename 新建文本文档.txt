@@ -1,0 +1,13 @@
+{
+  "createAt": "2019-01-17T03:10:08.135",
+  "createUser": "shiyijun",
+  "lockTerm": 1,
+  "memo": "理财产品",
+  "name": "货币基金",
+  "rewardRate": 10,
+  "status": "AUDITING",
+  "stepAmount": 10000,
+  "thresholdAmount": 100,
+  "updateAt": "2019-01-17 03:10:08",
+  "updateUser": "shiyijun"
+}

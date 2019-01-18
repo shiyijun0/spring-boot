@@ -29,7 +29,6 @@ public class VerifyTest {
     private OrderRepository orderRepository;
 
     @Autowired
-    @Qualifier("readorderRepository")
     private OrderRepository readOrderRepository;
 
     @Autowired
@@ -37,19 +36,19 @@ public class VerifyTest {
     private OrderRepository backOrderRepository;
     @Test
     public void makeVerificationTest(){
-        Date day = new GregorianCalendar(2017,0,1).getTime();
-        File file = verifyService.makeVerificationFile("111",day);
-        System.out.println(file.getAbsolutePath());
+        Date day = new GregorianCalendar(2018,11,30).getTime();
+        File file = verifyService.makeVerificationFile("1",day);
+        System.out.println(file.getAbsolutePath()+"*****************");
     }
     @Test
     public void saveVerificationOrders(){
-        Date day = new GregorianCalendar(2017,0,1).getTime();
-        verifyService.saveChanOrders("111",day);
+        Date day = new GregorianCalendar(2018,11,30).getTime();
+        verifyService.saveChanOrders("1",day);
     }
     @Test
     public void verifyTest(){
-        Date day = new GregorianCalendar(2017,0,1).getTime();
-        System.out.println(String.join(";", verifyService.verifyOrder("111", day)));
+        Date day = new GregorianCalendar(2017,11,1).getTime();
+        System.out.println(String.join(";", verifyService.verifyOrder("1", day)));
     }
     @Test
     public void queryOrder(){

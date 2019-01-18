@@ -1,5 +1,6 @@
 package com.imooc.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
@@ -31,7 +32,9 @@ public class Product implements Serializable{
     //收益率，因为要与其他数相乘，所以使用BigDecimal
     private BigDecimal rewardRate;
     private String memo;
+    @JsonFormat(pattern = "YYYY-MM-DD HH:mm:ss")
     private Date createAt;
+    @JsonFormat(pattern = "YYYY-MM-DD HH:mm:ss")
     private Date updateAt;
     private String createUser;
     private String updateUser;
